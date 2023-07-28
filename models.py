@@ -2,6 +2,7 @@
 
 from flask_sqlalchemy import SQLAlchemy
 
+
 db = SQLAlchemy()
 
 
@@ -50,7 +51,7 @@ class Pet(db.Model):
     )
 
     note = db.Column(
-        db.String(),
+        db.String()
     )
 
     available = db.Column(
