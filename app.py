@@ -45,14 +45,14 @@ def add_pet():
         species = form.species.data
         photo_url = form.photo_url.data
         age = form.age.data
-        notes = form.notes.data
+        note = form.note.data
 
         new_pet = Pet(
             name=name,
             species=species,
             photo_url=photo_url,
             age=age,
-            notes=notes
+            note=note
         )
 
         db.session.add(new_pet)
@@ -62,4 +62,3 @@ def add_pet():
 
     else:
         return render_template("add_pet.html", form=form)
-

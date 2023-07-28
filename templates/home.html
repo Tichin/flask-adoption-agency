@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<h1>HOME PAGE</h1>
 
 {% for pet in pets %}
 <p> {{ pet.name }}</p>
@@ -8,6 +9,8 @@
 <p><b> {{ pet.available }} </b></p>
 
 {% endfor %}
+
+<a class="btn btn-primary" href="/add">Add a Pet</a>
 
 
 {% endblock %}

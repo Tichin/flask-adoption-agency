@@ -2,6 +2,7 @@
 
 from flask_sqlalchemy import SQLAlchemy
 
+PHOTO_URL = 'https://en.wikipedia.org/wiki/Van_cat#/media/File:VAN_CAT.png'
 
 db = SQLAlchemy()
 
@@ -33,6 +34,12 @@ class Pet(db.Model):
         nullable=False
     )
 
+    # species = db.Column(
+    #     db.String(20),
+    #     nullable=False,
+    #     CheckConstraint=(['cat', 'dog', 'porcupine'])
+    # )
+
     species = db.Column(
         db.String(20),
         nullable=False
@@ -44,10 +51,15 @@ class Pet(db.Model):
         default=''
     )
 
+    # age = db.Column(
+    #     db.String(),
+    #     nullable=False,
+    #     CheckConstraint=(['baby', 'young', 'adult', 'senior'])
+    # )
+
     age = db.Column(
         db.String(),
-        nullable=False,
-        CheckConstraint=(['baby', 'young', 'adult', 'senior'])
+        nullable=False
     )
 
     note = db.Column(
@@ -57,5 +69,5 @@ class Pet(db.Model):
     available = db.Column(
         db.Boolean(),
         nullable=False,
-        default=True,
+        default='available'
     )
