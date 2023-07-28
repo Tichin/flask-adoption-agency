@@ -4,9 +4,12 @@
 <h1>HOME PAGE</h1>
 
 {% for pet in pets %}
-<p> {{ pet.name }}</p>
+<a href="/{{pet.id}}"> {{ pet.name }}</a>
 <img src="{{pet.photo_url}}" alt="{{pet.name}} image">
-<p><b> {{ pet.available }} </b></p>
+
+{% if pet.available %}
+<p><b> Available </b></p>
+{% endif %}
 
 {% endfor %}
 

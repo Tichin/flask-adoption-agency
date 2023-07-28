@@ -48,7 +48,7 @@ class Pet(db.Model):
     photo_url = db.Column(
         db.String(),
         nullable=False,
-        default=''
+        default='https://clipartix.com/wp-content/uploads/2016/10/Lion-paw-print-clipart-kid.png'
     )
 
     # age = db.Column(
@@ -69,5 +69,5 @@ class Pet(db.Model):
     available = db.Column(
         db.Boolean(),
         nullable=False,
-        default='available'
+        default=True
     )
