@@ -16,6 +16,7 @@ Notes
 
 class AddPetForm(FlaskForm):
     """Form for adding a pet"""
+
     name = StringField("Pet Name",
                        validators=[InputRequired()])
     species = SelectField("Species",
@@ -34,6 +35,7 @@ class AddPetForm(FlaskForm):
 
 class EditPetForm(FlaskForm):
     """Form for editing a pet's information"""
+
     photo_url = StringField("Photo URL",
                             validators=[Optional(), URL()])
     note = TextAreaField("Notes",

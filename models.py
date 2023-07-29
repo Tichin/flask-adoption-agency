@@ -2,8 +2,6 @@
 
 from flask_sqlalchemy import SQLAlchemy
 
-PHOTO_URL = 'https://en.wikipedia.org/wiki/Van_cat#/media/File:VAN_CAT.png'
-
 db = SQLAlchemy()
 
 
@@ -46,8 +44,8 @@ class Pet(db.Model):
     )
 
     photo_url = db.Column(
-        db.String(),
-        nullable=False,
+        db.String(),  # either db.Text
+        nullable=False,  # url to global variable
         default='https://clipartix.com/wp-content/uploads/2016/10/Lion-paw-print-clipart-kid.png'
     )
 

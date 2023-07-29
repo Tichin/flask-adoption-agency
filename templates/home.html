@@ -4,16 +4,18 @@
 <h1>HOME PAGE</h1>
 
 {% for pet in pets %}
+
 <a href="/{{pet.id}}"> {{ pet.name }}</a>
-<img src="{{pet.photo_url}}" alt="{{pet.name}} image">
+<!-- check if there is a photo_url -->
+<img style="width:100px" src="{{pet.photo_url}}" alt="{{pet.name}} image">
 
 {% if pet.available %}
-<p><b> Available </b></p>
-{% endif %}
 
+<p><b> Available </b></p>
+
+{% endif %}
 {% endfor %}
 
 <a class="btn btn-primary" href="/add">Add a Pet</a>
-
 
 {% endblock %}
